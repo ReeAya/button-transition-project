@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --btn-color: rgb(66, 177, 245);
+  --btn-font-color: white;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--btn-font-color);
+  margin-right: 100px;
+  margin-bottom: 60px;
+}
+
+.btn.btn-fade:hover {
+  background-color: transparent;
+  transition: background-color, 3s ease-in-out;
+}
+
+.btn.btn-color-change:focus {
+  background-color: red;
+  color: black;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
